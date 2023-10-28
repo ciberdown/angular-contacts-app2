@@ -1,0 +1,16 @@
+<grid gridTemplateColumns="10fr 1fr 6fr" gap="20px">
+  <grid gridTemplateColumns="1fr" gap="20px">
+    <app-signle-contact
+      *ngFor="let contact of contactsService.getContacts(); let i = index"
+      [contact]="contact"
+      [index]="i"
+    />
+  </grid>
+
+  <section class="vr-line"></section>
+
+  <flexbox flexDirection="column" gap="20px" alignItems="stretch">
+    <button routerLink="add">add contact part</button>
+    <router-outlet></router-outlet>
+  </flexbox>
+</grid>

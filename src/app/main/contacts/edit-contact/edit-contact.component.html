@@ -1,0 +1,13 @@
+<flexbox flexDirection="column" gap="30px" alignItems="center">
+  <flexbox>
+    name:
+    <input type="text" [placeholder]="contact?.name" [(ngModel)]="name" />
+  </flexbox>
+
+  <flexbox>
+    age:
+    <input type="number" [placeholder]="contact?.age" [(ngModel)]="age" />
+  </flexbox>
+
+  <button (click)="saveEdit()">save</button>
+</flexbox>
